@@ -1,0 +1,68 @@
+# Databse of Favicon Hash
+---
+1: 
+  name: "Gitlab"
+  hash: "1278323681"
+2: 
+  name: "FS Switch"
+  hash: "1286220452"
+3: 
+  name: "Tomcat"
+  hash: "-297069493"
+4:
+  name: "PhpMyAdmin"
+  hash: "-1010568750"
+5:
+  name: "PhpMyAdmin"
+  hash: "-476231906"
+6:
+  name: "Jenkins"
+  hash: "81586312"
+7:
+  name: "OpenVPN"
+  hash: "396533629"
+8:
+  name: "Portainer"
+  hash: "-1424036600"
+9:
+  name: "GraphQL"
+  hash: "-1067420240"
+10:
+  name: "PhpMyAdmin"
+  hash: "-1010568750"
+11: 
+  name: "Spring Boot"
+  hash: "116323821"
+12:
+  name: "Adminer"
+  hash: "572074752"
+13: 
+  name: "Roundcube Webmail"
+  hash: "-976235259"
+14: 
+  name: "pfSense"
+  hash: "1015545776"
+15: 
+  name: "cPanel Login"
+  hash: "1993518473"
+16: 
+  name: "Magento"
+  hash: "-38580010"
+17:
+  name: "Drupal"
+  hash: ":-167656799"
+18:
+  name: "Joomla"
+  hash: "1627330242"
+19: 
+  name: "Wordpress Under Construction"
+  hash: "191654058"
+20: 
+  name: "Wordpress"
+  hash: "-2133341160"
+21: 
+  name: "SeaFile"
+  hash: "-12700016"
+22:
+  name: "Outlook Web App"
+  hash: "1768726119"

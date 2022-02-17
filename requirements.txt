@@ -1,0 +1,8 @@
+mmh3
+codecs
+requests
+argparse
+warnings
+shodan
+yaml
+sys
