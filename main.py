@@ -91,7 +91,7 @@ def common_scan():
                 scan_shodan(hash, org=options.org)
                 num += 1
     else:
-        print("[!] database.yml pas trouvé")
+        print("[!] database.yml not found !")
 
 if __name__ == '__main__':
 
