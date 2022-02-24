@@ -36,14 +36,20 @@ def get_hash_from_url(url, verify=False):
             pass
 
     # Calcul Hash
-    session = requests.session()
-    favdata = session.get(url, verify=verify)
-    if 'Content-Type' in favdata.headers:
-        if "text/html" not in favdata.headers['Content-Type']:
-            favicon = codecs.encode(favdata.content, "base64")
-            favhash = mmh3.hash(favicon)
-            return favhash
-
+    try:
+        session = requests.session()
+        favdata = session.get(url, verify=verify)
+        if 'Content-Type' in favdata.headers:
+            if "text/html" not in favdata.headers['Content-Type']:
+                favicon = codecs.encode(favdata.content, "base64")
+                favhash = mmh3.hash(favicon)
+                return favhash
+    except requests.ConnectionError:
+        print("[-] Error : couldn't connect to server")
+        sys.exit()
+    except requests.Timeout:
+        print("[-] Error : request timeout")
+        sys.exit()
 
 # Calculate the hash of the favicon with an image
 def get_hash_from_image(image):

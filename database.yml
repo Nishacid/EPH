@@ -28,8 +28,8 @@
   name: "GraphQL"
   hash: "-1067420240"
 10:
-  name: "PhpMyAdmin"
-  hash: "-1010568750"
+  name: "DocuWiki"
+  hash: "630493013"
 11: 
   name: "Spring Boot"
   hash: "116323821"
@@ -66,3 +66,15 @@
 22:
   name: "Outlook Web App"
   hash: "1768726119"
+23:
+  name: "vShepre Web Client"
+  hash: "192671406"
+24:
+  name: "Grafana"
+  hash: "2123863676"
+25:
+  name: "Sharepoint"
+  hash: "-146638980"
+26:
+  name: "Kibana"
+  hash: "-645642209"

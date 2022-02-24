@@ -3,4 +3,3 @@ requests
 argparse
 shodan
 pyyaml
-sys

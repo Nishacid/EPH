@@ -37,16 +37,16 @@ pip3 install -r requirements.txt
 ## Usage
 
 ```bash
-usage: main.py [-h] --api API [--org ORG] [--url URL] [--img IMG] [--hash HASH] [--common]
+usage: main.py [-h] -a API [-o ORG] (-u URL | -i IMG | -H HASH | -c)
 
 optional arguments:
-  -h, --help   show this help message and exit
-  --api API    Shodan API Key
-  --org ORG    Targeted organization
-  --url URL    URL of the favicon
-  --img IMG    Image source of the favicon
-  --hash HASH  Hash of the favicon
-  --common     Common Favicon Scan
+  -h, --help            show this help message and exit
+  -a API, --api API     Shodan API Key
+  -o ORG, --org ORG     Targeted organization
+  -u URL, --url URL     URL of the favicon
+  -i IMG, --img IMG     Image source of the favicon
+  -H HASH, --hash HASH  Hash of the favicon
+  -c, --common          Common Favicon Scan
 ```
 
 ## Exemple 
