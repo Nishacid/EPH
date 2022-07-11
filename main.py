@@ -103,36 +103,38 @@ def common_scan():
         print("[!] database.yml not found !")
 
 if __name__ == '__main__':
+    try:
+        options = parseArgs()
 
-    options = parseArgs()
+        # A free API key will not working
+        SHODAN_API_KEY = options.API
+        api = shodan.Shodan(SHODAN_API_KEY)
 
-    # A free API key will not working
-    SHODAN_API_KEY = options.API
-    api = shodan.Shodan(SHODAN_API_KEY)
+        if options.common is not None:
+            print("[+] Performing a common scan...")
+            common_scan()
 
-    if options.common is not None:
-        print("[+] Performing a common scan...")
-        common_scan()
+        # URL Scan
+        elif options.url is not None:
+            url = options.url
+            url_hash = get_hash_from_url(url)
+            print(f"[+] The hash of the favicon is : {url_hash}")
+            print("[+] Performing a shodan scan...")
+            scan_shodan(url_hash, org=options.org)
 
-    # URL Scan
-    elif options.url is not None:
-        url = options.url
-        url_hash = get_hash_from_url(url)
-        print(f"[+] The hash of the favicon is : {url_hash}")
-        print("[+] Performing a shodan scan...")
-        scan_shodan(url_hash, org=options.org)
+        # Hash Scan
+        elif options.hash is not None:
+            hash = options.hash
+            print(f"[+] The hash of the favicon is : {hash}")
+            print("[+] Performing a shodan scan...")
+            scan_shodan(hash, org=options.org)
 
-    # Hash Scan
-    elif options.hash is not None:
-        hash = options.hash
-        print(f"[+] The hash of the favicon is : {hash}")
-        print("[+] Performing a shodan scan...")
-        scan_shodan(hash, org=options.org)
-
-    # Image Scan
-    elif options.img is not None:
-        image = options.img
-        img_hash = get_hash_from_image(image)
-        print(f"[+] The hash of the favicon is : {img_hash}")
-        print("[+] Performing a shodan scan...")
-        scan_shodan(img_hash, org=options.org)
+        # Image Scan
+        elif options.img is not None:
+            image = options.img
+            img_hash = get_hash_from_image(image)
+            print(f"[+] The hash of the favicon is : {img_hash}")
+            print("[+] Performing a shodan scan...")
+            scan_shodan(img_hash, org=options.org)
+    except KeyboardInterrupt:
+        print("Bye !")
