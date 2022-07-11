@@ -53,12 +53,15 @@ def get_hash_from_url(url, verify=False):
 
 # Calculate the hash of the favicon with an image
 def get_hash_from_image(image):
-    f = open(image, "rb")
-    data = f.read()
-    favicon = codecs.encode(data, "base64")
-    favhash = mmh3.hash(favicon)
-    return favhash
-
+    try:
+        f = open(image, "rb")
+        data = f.read()
+        favicon = codecs.encode(data, "base64")
+        favhash = mmh3.hash(favicon)
+        return favhash
+    except FileNotFoundError:
+        print("[-] Error : File not found")
+        sys.exit()
 
 # Shodan Scan
 def scan_shodan(argument, org=None):
