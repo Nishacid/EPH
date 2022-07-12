@@ -62,27 +62,7 @@ def get_hash_from_image(image):
     except FileNotFoundError:
         print("[-] Error : File not found")
         sys.exit()
-
-# Shodan Scan
-def scan_shodan(argument, org=None):
-    try:
-        if org is not None:
-            results = api.search(f'http.favicon.hash:{argument} org:{org}')
-        else:
-            results = api.search(f'http.favicon.hash:{argument}')
-        print(f"[+] Total results found : {results['total']}\n")
-
-        for result in results['matches']:
-            print(f"IP : {result['ip_str']}")
-            # print(f"Hostname : {result['hostnames']}")
-            print(f"Port : {result['port']}")
-            # print(f"OS : {result['os']}")
-            print(f"Organization : {result['org']}\n")
-    except shodan.APIError as e:
-        print(f"Error : {e}")
-        sys.exit()
-
-
+        
 # Scan of the Yaml Database
 def common_scan():
     if os.path.exists("database.yml"):
@@ -101,6 +81,28 @@ def common_scan():
                 num += 1
     else:
         print("[!] database.yml not found !")
+
+# Shodan Scan
+def scan_shodan(argument, org=None):
+    try:
+        if org is not None:
+            results = api.search(f'http.favicon.hash:{argument} org:{org}')
+        else:
+            results = api.search(f'http.favicon.hash:{argument}')
+        print(f"[+] Total results found : {results['total']}\n")
+
+        for result in results['matches']:
+            ip = result['ip_str']
+            print(f"IP : {ip}")
+            # print(f"Hostname : {result['hostnames']}")
+            port = result['port']
+            print(f"Port : {port}")
+            # print(f"OS : {result['os']}")
+            org = result['org']
+            print(f"Organization : {org}\n")
+    except shodan.APIError as e:
+        print(f"Error : {e}")
+        sys.exit()
 
 if __name__ == '__main__':
     try:
@@ -136,5 +138,7 @@ if __name__ == '__main__':
             print(f"[+] The hash of the favicon is : {img_hash}")
             print("[+] Performing a shodan scan...")
             scan_shodan(img_hash, org=options.org)
+
     except KeyboardInterrupt:
         print("Bye !")
+        sys.exit()

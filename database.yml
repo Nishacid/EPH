@@ -1,11 +1,13 @@
 # Databse of Favicon Hash
+# Many hashes : https://github.com/sansatart/scrapts/blob/master/shodan-favicon-hashes.csv
+
 ---
 1: 
   name: "Gitlab"
   hash: "1278323681"
 2: 
-  name: "FS Switch"
-  hash: "1286220452"
+  name: "Gitlab"
+  hash: "516963061"
 3: 
   name: "Tomcat"
   hash: "-297069493"
@@ -40,41 +42,122 @@
   name: "Roundcube Webmail"
   hash: "-976235259"
 14: 
-  name: "pfSense"
-  hash: "1015545776"
+  name: "Roundcube Webmail"
+  hash: "2140379067"
 15: 
   name: "cPanel Login"
   hash: "1993518473"
 16: 
-  name: "Magento"
-  hash: "-38580010"
+  name: "Drupal"
+  hash: "1174841451"
 17:
   name: "Drupal"
-  hash: ":-167656799"
+  hash: "-167656799"
 18:
   name: "Joomla"
-  hash: "1627330242"
+  hash: "1627330242"  
 19: 
-  name: "Wordpress Under Construction"
-  hash: "191654058"
+  name: "Joomla"
+  hash: "366524387"
 20: 
-  name: "Wordpress"
-  hash: "-2133341160"
+  name: "Joomla"
+  hash: "-1950415971"
 21: 
-  name: "SeaFile"
-  hash: "-12700016"
+  name: "Outlook Web App"
+  hash: "1356662359"
 22:
   name: "Outlook Web App"
   hash: "1768726119"
 23:
-  name: "vShepre Web Client"
-  hash: "192671406"
+  name: "Microsoft Outlook"
+  hash: "-1249852061"
 24:
-  name: "Grafana"
-  hash: "2123863676"
+  name: "Microsoft Outlook Web App"
+  hash: "442749392"
 25:
   name: "Sharepoint"
   hash: "-146638980"
 26:
   name: "Kibana"
   hash: "-645642209"
+27:
+  name: "Kibana"
+  hash: "-267431135"
+28:
+  name: "Kibana"
+  hash: "-759754862"
+29:
+  name: "Kibana"
+  hash: "-1200737715"
+30:
+  name: "Kibana"
+  hash: "75230260"
+31:
+  name: "Kibana"
+  hash: "1668183286"
+32:
+  name: "WebSocket test page"
+  hash: "-291579889"
+33:
+  name: "Docker Entreprise"
+  hash: "-1814887000"
+34:
+  name: "Docker Registery"
+  hash: "1937209448"
+35:
+  name: "Elastic Database"
+  hash: "1611729805"
+36:
+  name: "FS Switch"
+  hash: "1286220452"
+37:
+  name: "Magento"
+  hash: "-38580010"
+38:
+  name: "pfSense"
+  hash: "1405460984"
+39:
+  name: "pfSense"
+  hash: "1015545776"
+40:
+  name: "Wordpress"
+  hash: "-2133341160"
+41:
+  name: "Wordpress Under Construction"
+  hash: "191654058"
+42:
+  name: "Gitea"
+  hash: "1969970750"
+43: 
+  name: "Grafana"
+  hash: "2123863676"
+44: 
+  name: "SeaFile"
+  hash: "-12700016"
+45:
+  name: "vShepre Web Client"
+  hash: "192671406"
+46:
+  name: "VmWare Horizon"
+  hash: "-1255992602"
+47:
+  name: "VmWare Horizon"
+  hash: "1895360511"
+48:
+  name: "VmWare Horizon"
+  hash: "-991123252"
+49:
+  name: "Vmware Secure File Transfer"
+  hash: "1642701741"
+50:
+  name: "Webmin"
+  hash: "1453890729"
+51:
+  name: "Webmin"
+  hash: "-1038557304"
+52:
+  name: "Webmin"
+  hash: "1280907310"
+53:
+  name: "Webmin"
+  hash: "479413330"
